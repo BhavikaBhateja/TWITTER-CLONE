@@ -1,0 +1,23 @@
+
+
+<body>
+    <div class="container">
+        <h1>Your Followers</h1>
+        <% for (var i=0; i < result.length; i++) { %>
+            <div class="follower">
+                <%var img=result[i].profilepic%>
+
+                    <% if (img !== null && img!="") { %>
+                        <img src="/uploads/<%= img %>" alt="this image" width="40px"/>
+                    <% } else   { %>
+                        <img src="https://www.tech101.in/wp-content/uploads/2018/07/blank-profile-picture.png" alt="" />    
+                    <% } %>
+                <!-- <img src="profile_picture.jpg" alt="Profile Picture"> -->
+                <p><%= result[i].fname+" "+ result[i].lname %></p>
+            </div>
+        <% } %>
+    </div>
+    <div style="text-align: center; margin-top: 20px;">
+        <a href="/home">Go back</a>
+    </div>
+</body>

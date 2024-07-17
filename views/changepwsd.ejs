@@ -1,0 +1,118 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        /* Reset styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+        }
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f8fa;
+            color: #14171a;
+        }
+        /* Container */
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        /* Profile form */
+        .profile-form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .profile-form h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .profile-form input[type="text"],
+        .profile-form input[type="file"],
+        .profile-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+        .profile-form input[type="submit"] {
+            background-color: #1da1f2;
+            color: #ffffff;
+            border: none;
+            padding: 12px 20px;
+            font-size: 18px;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+
+        .profile-form input[type="submit"]:hover {
+            background-color: #0d8bf9;
+        }
+        .profile-form a{
+            background-color: #1da1f2;
+            color: #ffffff;
+            border: none;
+            padding: 12px 20px;
+            font-size: 18px;
+            border-radius: 25px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .profile-form a:hover{
+            background-color: #0d8bf9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile-form">
+            <h2>change password</h2>
+            <div class="col-md-6">
+
+                <h2><%=msg%></h2>
+                
+                  <form action="/editpwsd_submit" method="post" >
+              
+                      <div class="form-group">
+                        <label for="opass">Old Password:</label>
+                        <input type="text" name="old_pass">
+                      </div>
+                      <div class="form-group">
+                        <label for="opass">New Password:</label>
+                        <input type="password" name="new_pass">
+                      </div>
+                      <div class="form-group">
+                        <label for="opass">Confirm Password:</label>
+                        <input type="password" name="confirm_pass">
+                      </div>
+                      
+                      
+                      <button type="submit" class="btn btn-primary">Change password</button>
+                      
+                    </form>
+                  
+                  
+                  
+                  
+                </div>
+                
+        </div>
+    </div>
+</body>
+</html>
+
+
+  
